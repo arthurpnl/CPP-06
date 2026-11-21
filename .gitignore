@@ -1,0 +1,6 @@
+*.o
+convert
+serializer
+identify
+TODO.md
+NOTES.md
