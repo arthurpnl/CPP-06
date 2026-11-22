@@ -32,7 +32,7 @@ void ScalarConverter::convert(const std::string &str)
             printChar(len, str);
             break;
         case INT:
-            printInt();
+            printInt(len, str);
             break;
         case DOUBLE:
             printDouble();

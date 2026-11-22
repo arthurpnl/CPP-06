@@ -13,14 +13,16 @@ void printChar(size_t len, const std::string &str)
         std::cout << "char: " << "'" << c << "'" << std::endl;
     else
         std::cout << "char: " << "Non displayable" << std::endl;
-        
+
     std::cout << "int: " << static_cast<int>(c) << std::endl;
     std::cout << "float: " << std::fixed << std::setprecision(1) << static_cast<float>(c) << "f" << std::endl;
     std::cout << "double: " << std::fixed << std::setprecision(1) << static_cast<double>(c) << std::endl;
 }
 
-void printInt()
+void printInt(size_t len, const std::string &str)
 {
+    (void)len;
+    (void)str;
     std::cout << "printInt() called" << std::endl;
 }
 

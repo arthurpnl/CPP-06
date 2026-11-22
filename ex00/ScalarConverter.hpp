@@ -38,7 +38,7 @@ e_type whichType(size_t len, const std::string &str);
 
 //print functions
 void printChar(size_t len, const std::string &str);
-void printInt();
+void printInt(size_t len, const std::string &str);
 void printDouble();
 void printFloat();
 void printPseudo();
