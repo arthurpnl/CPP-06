@@ -28,23 +28,23 @@ void ScalarConverter::convert(const std::string &str)
 
     switch(type)
     {
-        case CHAR;
-            printChar();
-        case INT;
+        case CHAR:
+            printChar(len, str);
+            break;
+        case INT:
             printInt();
             break;
-        case DOUBLE;
+        case DOUBLE:
             printDouble();
             break;
-        case FLOAT;
+        case FLOAT:
             printFloat();
             break;
-        case PSEUDO;
+        case PSEUDO:
             printPseudo();
             break;
-        case INVALID;
+        case INVALID:
             std::cout << "Invalid argument" << std::endl;
             break;
     }
-
 }
