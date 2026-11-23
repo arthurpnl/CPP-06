@@ -21,9 +21,32 @@ void printChar(size_t len, const std::string &str)
 
 void printInt(size_t len, const std::string &str)
 {
+    long l;
     (void)len;
-    (void)str;
-    std::cout << "printInt() called" << std::endl;
+    l = std::strtol(str.c_str(), NULL, 10);
+    if (l > MAX_INT || l < MIN_INT)
+    {
+        std::cout << "char: impossible" << std::endl;
+        std::cout << "int: impossible" << std::endl;
+        std::cout << "float: " << std::fixed << std::setprecision(1) << static_cast<float>(l) << "f" << std::endl;
+        std::cout << "double: " << static_cast<double>(l) << std::endl;
+    }
+    else
+    {
+        if (l >= 0 && l <= 127)
+        {
+            if (std::isprint(l))
+                std::cout << "char: " << "'" << static_cast<char>(l) << "'" << std::endl;
+            else
+                std::cout << "char: Non displayable" << std::endl;
+        }
+        else
+            std::cout << "char: impossible" << std::endl;
+        std::cout << "int: " << static_cast<int>(l) << std::endl;
+        std::cout << "float: " << std::fixed << std::setprecision(1) << static_cast<float>(l) << "f" << std::endl;
+        std::cout << "double: " << static_cast<double>(l) << std::endl;
+
+    }
 }
 
 void printDouble()
