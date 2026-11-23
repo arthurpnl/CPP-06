@@ -61,10 +61,21 @@ int isFloat(size_t len, const std::string &str)
     return(0);
 }
 
+int isPseudo(const std::string &str)
+{
+    if (str == "nan" || str == "+inf" || str == "-inf")
+        return (1);
+    if (str == "nanf" || str == "+inff" || str == "-inff")
+        return (1);
+    return (0);
+}
+
 e_type whichType(size_t len, const std::string &str)
 {
     if (len == 0)
         return (INVALID);
+    if (isPseudo(str))
+        return (PSEUDO);
     if (isChar(len, str))
         return (CHAR);
     if (isInt(len, str))

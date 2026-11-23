@@ -32,16 +32,16 @@ void ScalarConverter::convert(const std::string &str)
             printChar(len, str);
             break;
         case INT:
-            printInt(len, str);
+            printInt(str);
             break;
         case DOUBLE:
-            printDouble(len, str);
+            printDouble(str);
             break;
         case FLOAT:
-            printFloat(len, str);
+            printFloat(str);
             break;
         case PSEUDO:
-            printPseudo();
+            printPseudo(str);
             break;
         case INVALID:
             std::cout << "Invalid argument" << std::endl;
