@@ -35,10 +35,10 @@ void ScalarConverter::convert(const std::string &str)
             printInt(len, str);
             break;
         case DOUBLE:
-            printDouble();
+            printDouble(len, str);
             break;
         case FLOAT:
-            printFloat();
+            printFloat(len, str);
             break;
         case PSEUDO:
             printPseudo();

@@ -49,13 +49,17 @@ void printInt(size_t len, const std::string &str)
     }
 }
 
-void printDouble()
+void printDouble(size_t len, const std::string &str)
 {
+    (void)len;
+    (void)str;
     std::cout << "printDouble called" << std::endl;
 }
 
-void printFloat()
+void printFloat(size_t len, const std::string &str)
 {
+    (void)len;
+    (void)str;
     std::cout << "printFloat() called" << std::endl;
 }
 
